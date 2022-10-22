@@ -8,7 +8,7 @@ function handleCurrencyForm(event) {
 }
 
 function displayRate() {
-  document.querySelector('#printResponse').innerText = `your exchange rate is{}`
+  document.querySelector('#printResponse').innerText = `your exchange rate is ${}`
 }
 
 function displayError() {
