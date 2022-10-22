@@ -7,18 +7,18 @@ function handleCurrencyForm(event) {
   event.preventDefault();
   let promise = Currency.getExchange();
   promise.then(function(currencyArray) {
-    displayRates(currencyArray);
+    displayRate(currencyArray);
   }, function(errorArray) {
     displayError(errorArray);
   });
 }
 
 function displayRate() {
-  document.querySelector('#printResponse').innerText = `your exchange rate is ${}`
+  document.querySelector('#printResponse').innerText = `your exchange rate is`;
 }
 
 function displayError() {
-  document.querySelector('#printResponse').innerText = `We were unable to process your request at this time`
+  document.querySelector('#printResponse').innerText = `We were unable to process your request at this time`;
 }
 
 window.addEventListener("load", function() {
