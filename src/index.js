@@ -6,6 +6,11 @@ import Currency from './currency';
 function handleCurrencyForm(event) {
   event.preventDefault();
   let promise = Currency.getExchange();
+  promise.then(function(currencyArray) {
+    displayRates(currencyArray);
+  }, function(errorArray) {
+    displayError(errorArray);
+  });
 }
 
 function displayRate() {
