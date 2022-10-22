@@ -8,11 +8,11 @@ function handleCurrencyForm(event) {
 }
 
 function displayRate() {
-
+  document.querySelector('#printResponse').innerText = `your exchange rate is{}`
 }
 
 function displayError() {
-
+  document.querySelector('#printResponse').innerText = `We were unable to process your request at this time`
 }
 
 window.addEventListener("load", function() {
