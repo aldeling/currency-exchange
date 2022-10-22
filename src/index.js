@@ -5,6 +5,7 @@ import Currency from './currency';
 
 function handleCurrencyForm(event) {
   event.preventDefault();
+  let promise = Currency.getExchange();
 }
 
 function displayRate() {
