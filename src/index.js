@@ -13,8 +13,9 @@ function handleCurrencyForm(event) {
   });
 }
 
-function displayRate() {
-  document.querySelector('#printResponse').innerText = `your exchange rate is`;
+function displayRate(currencyArray) {
+  let userValue = document.querySelector("#exchangeValue").value;
+  document.querySelector('#printResponse').innerText = `your exchange rate is ${currencyArray.conversion_rates[userValue]}`;
 }
 
 function displayError() {
