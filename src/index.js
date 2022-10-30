@@ -17,8 +17,13 @@ function displayRate(currencyArray) {
   let userAmount = document.querySelector("#amount").value;
   let userValue = document.querySelector("#exchangeValue").value;
   let exchRate = currencyArray.conversion_rates[userValue];
-  document.querySelector('#finalValue').innerText = `your rate is ${exchRate}`;
-  document.querySelector('#printResponse').innerText = `your exchange rate is ${userAmount * exchRate}`;
+  if (userValue === "Another Rate") {
+    document.querySelector('#finalValue').innerText = ``
+    document.querySelector('#printResponse').innerText = `sorry we have no other options for you`;
+  } else {
+    document.querySelector('#finalValue').innerText = `your rate is ${exchRate}`;
+    document.querySelector('#printResponse').innerText = `your exchange rate is ${userAmount * exchRate}`;
+  }
 }
 
 function displayError() {
