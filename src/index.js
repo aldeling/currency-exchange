@@ -14,8 +14,11 @@ function handleCurrencyForm(event) {
 }
 
 function displayRate(currencyArray) {
+  let userAmount = document.querySelector("#amount").value;
   let userValue = document.querySelector("#exchangeValue").value;
-  document.querySelector('#printResponse').innerText = `your exchange rate is ${currencyArray.conversion_rates[userValue]}`;
+  let exchRate = currencyArray.conversion_rates[userValue];
+  document.querySelector('#finalValue').innerText = `your rate is ${exchRate}`;
+  document.querySelector('#printResponse').innerText = `your exchange rate is ${userAmount * exchRate}`;
 }
 
 function displayError() {

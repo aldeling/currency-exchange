@@ -19,10 +19,4 @@ export default class Currency {
       retrieve.send();
     });
   }
-
-  createRate() {
-    let exchange = this.getExchange();
-    let totalRate = (this.usd) * `${exchange.response.conversion_rates["AED"]}`;
-    console.log(totalRate);
-  }
 }
