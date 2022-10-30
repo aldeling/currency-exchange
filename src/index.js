@@ -18,7 +18,7 @@ function displayRate(currencyArray) {
   let userValue = document.querySelector("#exchangeValue").value;
   let exchRate = currencyArray.conversion_rates[userValue];
   if (userValue === "Another Rate") {
-    document.querySelector('#finalValue').innerText = ``
+    document.querySelector('#finalValue').innerText = ``;
     document.querySelector('#printResponse').innerText = `sorry we have no other options for you`;
   } else {
     document.querySelector('#finalValue').innerText = `your rate is ${exchRate}`;
